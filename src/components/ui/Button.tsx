@@ -1,7 +1,6 @@
 import { cn } from '@/lib/utils';
 import { ButtonHTMLAttributes, FC, forwardRef } from 'react';
 import { VariantProps, cva } from 'class-variance-authority';
-import { getDisplayName } from 'next/dist/shared/lib/utils';
 import { Loader2 } from 'lucide-react';
 
 export const buttonVariants = cva(
