@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Tabs, TabsList, TabsTrigger } from '@/ui/Tabs';
 import { TabsContent } from '@radix-ui/react-tabs';
+import Code from '@/components/Code';
 
 const DocumentationTabs: FC = ({}) => {
   return (
@@ -9,7 +10,9 @@ const DocumentationTabs: FC = ({}) => {
         <TabsTrigger value='nodejs'>NodeJS</TabsTrigger>
         <TabsTrigger value='python'>Python</TabsTrigger>
       </TabsList>
-      <TabsContent value='nodejs'></TabsContent>
+      <TabsContent value='nodejs'>
+        <Code />
+      </TabsContent>
       <TabsContent value='python'></TabsContent>
     </Tabs>
   );
