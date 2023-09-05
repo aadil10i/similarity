@@ -1,7 +1,10 @@
+'use client';
+
 import { FC } from 'react';
-import { Tabs, TabsList, TabsTrigger } from '@/ui/Tabs';
-import { TabsContent } from '@radix-ui/react-tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/ui/Tabs';
+import SimpleBar from 'simplebar-react';
 import Code from '@/components/Code';
+import { nodejs, python } from '@/constants/documentation-code';
 
 const DocumentationTabs: FC = ({}) => {
   return (
@@ -11,9 +14,13 @@ const DocumentationTabs: FC = ({}) => {
         <TabsTrigger value='python'>Python</TabsTrigger>
       </TabsList>
       <TabsContent value='nodejs'>
-        <Code />
+        <SimpleBar>
+          <Code animated language='javascript' code={nodejs} show />
+        </SimpleBar>
       </TabsContent>
-      <TabsContent value='python'></TabsContent>
+      <TabsContent value='python'>
+        <Code animated language='python' code={python} show />
+      </TabsContent>
     </Tabs>
   );
 };

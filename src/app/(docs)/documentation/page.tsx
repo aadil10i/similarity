@@ -4,6 +4,8 @@ import Heading from '@/ui/Heading';
 import Paragraph from '@/ui/Paragraph';
 import DocumentationTabs from '@/components/DocumentationTabs';
 
+import 'simplebar-react/dist/simplebar.min.css';
+
 export const metadata: Metadata = {
   title: 'Similariy API | Documentation',
   description: 'Free & open-source text similarity API',
