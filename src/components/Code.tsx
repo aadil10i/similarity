@@ -7,7 +7,6 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import {
   atomOneDarkReasonable,
   atomOneLight,
-  solarizedLight,
 } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 interface CodeProps {
