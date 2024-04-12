@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { useTheme } from "next-themes";
+import { useTheme } from 'next-themes';
 
-import { FC, useEffect, useState } from "react";
-import SyntaxHighlighter from "react-syntax-highlighter";
+import { FC, useEffect, useState } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
 import {
   atomOneDarkReasonable,
   atomOneLight,
   solarizedLight,
-} from "react-syntax-highlighter/dist/esm/styles/hljs";
+} from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 interface CodeProps {
   code: string;
@@ -26,12 +26,12 @@ const Code = ({
   language,
 }: CodeProps) => {
   const { theme: applicationTheme } = useTheme();
-  console.log("current theme", applicationTheme);
+  console.log('current theme', applicationTheme);
 
   return (
     <SyntaxHighlighter
       language={language}
-      style={applicationTheme == "light" ? atomOneLight : atomOneDarkReasonable}
+      style={applicationTheme == 'light' ? atomOneLight : atomOneDarkReasonable}
     >
       {code}
     </SyntaxHighlighter>

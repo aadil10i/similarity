@@ -1,19 +1,19 @@
-import * as React from "react";
-import { VariantProps, cva } from "class-variance-authority";
+import * as React from 'react';
+import { VariantProps, cva } from 'class-variance-authority';
 
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 export const paragraphVariants = cva(
-  "max-w-prose text-slate-700 dark:text-slate-300 mb-2 text-center",
+  'max-w-prose text-slate-700 dark:text-slate-300 mb-2 text-center',
   {
     variants: {
       size: {
-        default: "text-base sm:text-lg",
-        sm: "text-sm sm:text-base",
+        default: 'text-base sm:text-lg',
+        sm: 'text-sm sm:text-base',
       },
     },
     defaultVariants: {
-      size: "default",
+      size: 'default',
     },
   }
 );
@@ -36,6 +36,6 @@ const Paragraph = React.forwardRef<HTMLParagraphElement, ParagraphProps>(
   }
 );
 
-Paragraph.displayName = "Paragraph";
+Paragraph.displayName = 'Paragraph';
 
 export default Paragraph;
